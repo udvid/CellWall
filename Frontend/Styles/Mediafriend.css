@@ -1,0 +1,592 @@
+@charset "utf-8";
+/**
+* MediaFriend CSS Library
+* Add necessary classes to your HTML elements and MediaFriend will control the styling of the webpage without worry
+* @version 1.0
+* @copyright Udvid.com
+* @author Hiranmoy Chatterjee
+* @namecase Lower Camel Case. Example: Fluid Container as fluidContainer
+* @suffix mediafriend css uses "mf-" suffix to classes
+*/
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/**
+* A full width wrapper
+*/
+.mf-wrapper {
+	position: relative;
+	width: 100%;
+}
+/**
+* A center aligned fixed container of 1080px width
+*/
+.mf-fixedContainer {
+	position: relative;
+	width: 1080px;
+	margin: auto;
+}
+/**
+* A center aligned fluid container of 100% width
+*/
+.mf-fluidContainer {
+	position: relative;
+	width: 100%;
+	margin: auto;
+}
+
+
+/* ------------------ GRID LAYOUT SYSTEM ------------------------- */
+
+/**
+* A 12 column grid system
+* @Mobile: <= 601 px
+* @Tablet: > 601 px and <= 993 px
+* @Standard Desktop & Laptop: > 993px and <= 1200 px
+* @Large Desktop and Laptop: > 1200 px
+* Device Category Classes: ss1 to ss12 ( mobile), ms1 to ms12 ( tablet ), bs1 to bs12 ( standard desktop & laptop ), vbs1 to vbs12 ( large desktop and laptop )
+* Row and Column Classes: "mf-row" for a grid row, "mf-col" for a grid column
+* To use a responsive grid, at first a "mf-row" classed div should be used.
+* Inside that div, a "mf-col" classed div must be added to create a grid column.
+* With the "mf-col" class, vbs4, bs8 etc. classes can be added.
+*/
+
+
+.mf-row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.mf-col, .mf-quarter, .mf-oneThird, .mf-half, .mf-twoThird {
+	float: left;
+	width: 100%;
+}
+.mf-col.ss1, .mf-fluidContainer.ss1 {
+	width: 8.3333%;
+}
+.mf-col.ss2, .mf-fluidContainer.ss2 {
+	width: 16.6666%;
+}
+.mf-col.ss3, .mf-fluidContainer.ss3 {
+	width: 24.9999%;
+}
+.mf-col.ss4, .mf-fluidContainer.ss4 {
+	width: 33.3333%;
+}
+.mf-col.ss5, .mf-fluidContainer.ss5 {
+	width: 41.6666%;
+}
+.mf-col.ss6, .mf-fluidContainer.ss6 {
+	width: 49.9999%;
+}
+.mf-col.ss7, .mf-fluidContainer.ss7 {
+	width: 58.3333%;
+}
+.mf-col.ss8, .mf-fluidContainer.ss8 {
+	width: 66.6666%;
+}
+.mf-col.ss9, .mf-fluidContainer.ss9 {
+	width: 74.9999%;
+}
+.mf-col.ss10, .mf-fluidContainer.ss10 {
+	width: 83.3333%;
+}
+.mf-col.ss11, .mf-fluidContainer.ss11 {
+	width: 91.6666%;
+}
+.mf-col.ss12, .mf-fluidContainer.ss12, .mf-half, .mf-oneThird, .mf-quarter, .mf-twoThird {
+	width: 99.9999%;
+	margin-bottom: 10px;
+}
+
+@media only screen and (min-width:601px) {
+.mf-col.ms1, .mf-fluidContainer.ms1 {
+	width: 8.3333%;
+}
+.mf-col.ms2, .mf-fluidContainer.ms2 {
+	width: 16.6666%;
+}
+.mf-col.ms3, .mf-quarter, .mf-fluidContainer.ms3 {
+	width: 24.9999%;
+}
+.mf-col.ms4, .mf-oneThird, .mf-fluidContainer.ms4 {
+	width: 33.3333%;
+}
+.mf-col.ms5, .mf-fluidContainer.ms5 {
+	width: 41.6666%;
+}
+.mf-col.ms6, .mf-half, .mf-fluidContainer.ms6 {
+	width: 49.9999%;
+}
+.mf-col.ms7, .mf-fluidContainer.ms7 {
+	width: 58.3333%;
+}
+.mf-col.ms8, .mf-twoThird, .mf-fluidContainer.ms8 {
+	width: 66.6666%;
+}
+.mf-col.ms9, .mf-fluidContainer.ms9 {
+	width: 74.9999%;
+}
+.mf-col.ms10, .mf-fluidContainer.ms10 {
+	width: 83.3333%;
+}
+.mf-col.ms11, .mf-fluidContainer.ms11 {
+	width: 91.6666%;
+}
+.mf-col.ms12, .mf-fluidContainer.ms12 {
+	width: 99.9999%;
+}
+}
+
+@media only screen and (min-width:993px) {
+.mf-col.bs1, .mf-fluidContainer.bs1 {
+	width: 8.3333%;
+}
+.mf-col.bs2, .mf-fluidContainer.bs2 {
+	width: 16.6666%;
+}
+.mf-col.bs3, .mf-quarter, .mf-fluidContainer.bs3 {
+	width: 24.9999%;
+}
+.mf-col.bs4, .mf-oneThird, .mf-fluidContainer.bs4 {
+	width: 33.3333%;
+}
+.mf-col.bs5, .mf-fluidContainer.bs5 {
+	width: 41.6666%;
+}
+.mf-col.bs6, .mf-half, .mf-fluidContainer.bs6 {
+	width: 49.9999%;
+}
+.mf-col.bs7, .mf-fluidContainer.bs7 {
+	width: 58.3333%;
+}
+.mf-col.bs8, .mf-twoThird, .mf-fluidContainer.bs8 {
+	width: 66.6666%;
+}
+.mf-col.bs9, .mf-fluidContainer.bs9 {
+	width: 74.9999%;
+}
+.mf-col.bs10, .mf-fluidContainer.bs10 {
+	width: 83.3333%;
+}
+.mf-col.bs11, .mf-fluidContainer.bs11 {
+	width: 91.6666%;
+}
+.mf-col.bs12, .mf-fluidContainer.bs12 {
+	width: 99.9999%;
+}
+}
+
+@media only screen and (min-width:1380px) {
+.mf-col.vbs1, .mf-fluidContainer.vbs1 {
+	width: 8.3333%;
+}
+.mf-col.vbs2, .mf-fluidContainer.vbs2 {
+	width: 16.6666%;
+}
+.mf-col.vbs3, .mf-quarter, .mf-fluidContainer.vbs3 {
+	width: 24.9999%;
+}
+.mf-col.vbs4, .mf-oneThird, .mf-fluidContainer.vbs4 {
+	width: 33.3333%;
+}
+.mf-col.vbs5, .mf-fluidContainer.vbs5 {
+	width: 41.6666%;
+}
+.mf-col.vbs6, .mf-half, .mf-fluidContainer.vbs6 {
+	width: 49.9999%;
+}
+.mf-col.vbs7, .mf-fluidContainer.vbs7 {
+	width: 58.3333%;
+}
+.mf-col.vbs8, .mf-twoThird, .mf-fluidContainer.vbs8 {
+	width: 66.6666%;
+}
+.mf-col.vbs9, .mf-fluidContainer.vbs9 {
+	width: 74.9999%;
+}
+.mf-col.vbs10, .mf-fluidContainer.vbs10 {
+	width: 83.3333%;
+}
+.mf-col.vbs11, .mf-fluidContainer.vbs11 {
+	width: 91.6666%;
+}
+.mf-col.vbs12, .mf-fluidContainer.vbs12 {
+	width: 99.9999%;
+}
+}
+
+@media only screen and (max-width:993px) {
+	.mf-fixedContainer {
+		width: 100% !important;
+	}
+}
+
+@media only screen and (max-width:601px) {
+	.mf-fixedContainer {
+		width: 100% !important;
+	}
+}
+/*TEXT*/
+.mf-S {
+	font-size: 11px;
+}
+.mf-N {
+	font-size: 13px;
+}
+.mf-SM {
+	font-size: 15px;
+}
+.mf-M {
+	font-size: 18px;
+}
+.mf-ML {
+	font-size: 25px;
+}
+.mf-L {
+	font-size: 30px;
+}
+.mf-LL {
+	font-size: 40px;
+}
+.mf-XL {
+	font-size: 50px;
+}
+.mf-XXL {
+	font-size: 80px;
+}
+.mf-XXXL {
+	font-size: 100px;
+}
+.mf-left {
+	text-align: left;
+}
+.mf-center {
+	text-align: center;
+}
+.mf-right {
+	text-align: right;
+}
+.mf-light {
+	color: #FFF !important;
+}
+.mf-grey {
+	color: #999 !important;
+}
+.mf-dark {
+	color: #000 !important;
+}
+.mf-redText {
+	color: #F00 !important;
+}
+.mf-limeText {
+	color: #0F0 !important;
+}
+.mf-greenText {
+	color: #009900 !important;
+}
+.mf-indigoText {
+	color: #0000FF !important;
+}
+.mf-orangeText {
+	color: #F30 !important;
+}
+.mf-pinkText {
+	color: #F06 !important;
+}
+.mf-blueText {
+	color: #09C !important;
+}
+.mf-violetText {
+	color: #60F !important;
+}
+.mf-B {
+	font-weight: bold;
+}
+.mf-I {
+	font-style: italic;
+}
+.mf-BI {
+	font-weight: bold;
+	font-style: italic;
+}
+.mf-U {
+	text-decoration: underline !important;
+}
+.mf-BIU {
+	font-weight: bold;
+	font-style: italic;
+	text-decoration: underline !important;
+}
+.mf-RTL {
+	direction: rtl;
+}
+
+
+/*BOX MODEL*/
+.mf-autoMargin {
+	margin: auto;
+}
+.mf-topMargin {
+	margin-top: 10px;
+}
+.mf-leftMargin {
+	margin-left: 10px;
+}
+.mf-bottomMargin {
+	margin-bottom: 10px;
+}
+.mf-rightMargin {
+	margin-right: 10px;
+}
+.mf-margin {
+	margin: 10px;
+}
+.mf-topPad {
+	padding-top: 10px;
+}
+.mf-bottomPad {
+	padding-bottom: 10px;
+}
+.mf-leftPad {
+	padding-left: 10px;
+}
+.mf-rightPad {
+	padding-right: 10px;
+}
+.mf-pad {
+	padding: 10px;
+}
+.mf-doublePad {
+	padding: 20px;
+}
+.mf-fullWidth {
+	width: 100%;
+}
+.mf-block {
+	display: block;
+}
+.mf-inblock {
+	display: inline-block;
+}
+.mf-border {
+	border: 1px solid #CCC;
+}
+.mf-dashBorder {
+	border: 1px dashed #999;
+}
+.mf-whiteBorder {
+	border: 1px solid #FFF !important;
+}
+.mf-bottomBorder {
+	border-bottom: 1px solid #CCC;
+}
+.mf-topBorder {
+	border-top: 1px solid #CCC;
+}
+.mf-rightBorder {
+	border-right: 1px solid #CCC !important;
+}
+.mf-leftBorder {
+	border-left: 1px solid #CCC !important;
+}
+.mf-roundBorder {
+	border-radius: 5px;
+}
+.mf-bgWhite {
+	background-color: #FFF !important;
+}
+.mf-bgLightGrey {
+	background-color: #F7F7F7 !important;
+}
+.mf-bgGrey {
+	background-color: #999 !important;
+}
+.mf-bgBlack {
+	background-color: #000 !important;
+}
+.mf-bgGreen {
+	background-color: #096 !important;
+}
+.mf-bgRed {
+	background-color: #F00 !important;
+}
+.mf-bgBlue {
+	background-color: #06F !important;
+}
+.mf-bgPink {
+	background-color: #F69 !important;
+}
+.mf-bgViolet {
+	background-color: #609 !important;
+}
+.mf-shadow {
+	box-shadow: 0px 0px 5px #999 !important;
+}
+.mf-relPos {
+	position: relative;
+}
+.mf-absolPos {
+	position: absolute;
+}
+.mf-fixdPos {
+	position: fixed;
+}
+
+
+/* FORM CONTROLS */
+
+label {
+}
+input, textarea, select, button {
+	outline: 0;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	font-size: 13px;
+	border: 1px solid #DDD;
+}
+input, select {
+	padding: 10px;
+}
+.mf-input {
+	border-radius: 4px;
+}
+textarea {
+	resize: vertical;
+	padding: 10px;
+}
+.mf-noResize {
+	resize: none !important;
+}
+button {
+	cursor: pointer;
+	border: 1px solid #CCC;
+	padding: 5px 15px;
+}
+button[disabled] {
+	color: #CCC;
+	border: 1px solid #DDD;
+	cursor: not-allowed;
+}
+fieldset {
+	border: 1px solid #CCC;
+	padding: 10px;
+}
+legend {
+	color: #999;
+	padding: 3px 10px;
+	border: 1px solid #CCC;
+	min-width: 100px;
+	text-align: center;
+}
+
+/*LINK*/
+
+a:link, a:visited {
+	text-decoration: none;
+	color: #036;
+}
+a:hover, a:active {
+	color: #036;
+}
+a.mf-light:link, a.mf-light:visited, a.mf-light:hover, a.mf-light:active {
+	color: #FFF;
+}
+
+
+/*TABLE*/
+.noBorder {
+	border-collapse: collapse;
+}
+.noBorder th {
+	padding: 0 !important;
+	border: none !important
+}
+.noBorder td {
+	padding: 0 !important;
+	border: none !important
+}
+.hidden {
+	display: none;
+}
+.mf-hidden {
+	display: none !important;
+}
+.mf-divider {
+	background-color: #CCC;
+	height: 1px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+
+/*BUTTON*/
+.mf-btn {
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.mf-btn.btnWhite {
+	background-color: #EBEBEB;
+	color: #000;
+	border: 1px solid #666;
+}
+.mf-btn.btnBlack {
+	background-color: #000;
+	color: #FFF;
+	border: none !important;
+}
+.mf-btn.btnOrange {
+	background-color: #F60;
+	color: #FFF;
+	border: none !important;
+}
+.mf-btn.btnPink {
+	background-color: #C39;
+	color: #FFF;
+	border: none !important;
+}
+.mf-btn.btnRed {
+	background-color: #F00;
+	color: #FFF;
+	border: none !important;
+}
+.mf-btn.btnGreen {
+	background-color: #090;
+	color: #FFF;
+	border: none !important;
+}
+.mf-btn.btnBlue {
+	background-color: #00F;
+	color: #FFF;
+	border: none !important;
+}
+.mf-btn.btnYellow {
+	background-color: #FC0;
+	color: #FFF;
+	border: none !important;
+}
+.mf-btn.btnGrey {
+	background-color: #999;
+	color: #FFF;
+	border: none !important;
+}
+.mf-imageBtn {
+	display: inline-block;
+	background-repeat: no-repeat;
+}
+.mf-imageBtn.imgCenter {
+	background-position: center center;
+}
+.mf-imageBtn.imgCenter:hover {
+	opacity: 0.9;
+}
+.mf-imageBtn.imgLeftCenter {
+	background-position: left center;
+}
+.mf-imageBtn.imgLeftTop {
+	background-position: left top;
+}
