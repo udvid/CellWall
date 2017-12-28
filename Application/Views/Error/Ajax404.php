@@ -1,0 +1,2 @@
+<div style="background-image:url(/Assets/Images/wrong.png); background-repeat:no-repeat; background-size:80px 80px; background-position:center center; height:80px;"></div>
+<h3 class="mf-center">Requested material not found.</h3>
